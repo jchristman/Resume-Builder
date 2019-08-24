@@ -1,0 +1,162 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy CV/Resume - XeLaTeX Template % Version 1.0 (5/5/2014)
+% Note: Compile with XeLaTeX.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[letterpaper]{deedy-resume}
+        
+\usepackage{booktabs}  % Training/certification table.
+\usepackage{tabularx}  % Force page width.
+\usepackage{multicol}
+\usepackage{censor}
+\usepackage[final]{qrcode}
+
+
+\newcommand{\icon}[1]{%
+  \begingroup\normalfont
+  \includegraphics[height=\fontcharht\font`\B]{#1}%
+  \endgroup
+}
+
+\newcommand{\boldTitle}[1]{
+\color{headings}\fontspec[Path = fonts/raleway/]{Raleway-Medium}\fontsize{10pt}{12pt}\selectfont{#1}
+}
+
+%------------------------------------------------
+%------------------------------------------------
+%------------------------------------------------
+
+
+\StopCensoring  % Comment this line to censor designated items.
+
+\input{settings.tex}
+
+\newcommand{\companyName}{COMPANYNAME}
+
+\newcommand{\casenumber}{
+\begin{textblock}{25}(4,2)
+\color{date}\fontspec[Path = fonts/raleway/]{Raleway-ExtraLight}\fontsize{8pt}{10pt}\selectfont
+RES-\censor{\internalcasenumber}
+\end{textblock}
+}
+
+%------------------------------------------------
+
+\begin{document}
+
+%------------------------------------------------
+
+\lastupdated  % Top right.
+\casenumber   % Top left.
+
+\namesection{\firstName}{\lastName}{
+\censor{\email\ | \phone}
+}
+
+%------------------------------------------------
+%------------------------------------------------
+%------------------------------------------------
+
+\begin{minipage}[t]{0.62\textwidth}
+
+%------------------------------------------------
+
+\section{Experience}
+
+\input{subsections/experience/job2.tex}
+\sectionspace
+
+\input{subsections/experience/job1.tex}
+\sectionspace
+
+\input{subsections/experience/job3.tex}
+\sectionspace
+
+%------------------------------------------------
+
+\section{Education}
+
+\input{subsections/education/grad-school.tex}
+\sectionspace
+
+\input{subsections/education/undergrad-school.tex}
+\sectionspace
+
+%------------------------------------------------
+
+\section{Selected Projects}
+
+\input{subsections/projects/github-2.tex}
+\sectionspace
+
+\input{subsections/projects/github-1.tex}
+\sectionspace
+
+%------------------------------------------------
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+
+%------------------------------------------------
+
+\section{Security Clearance} 
+
+\input{subsections/extra/security-clearance.tex}
+\sectionspace
+
+
+%------------------------------------------------
+
+\section{Proficiencies}
+
+\input{subsections/proficiencies/prog-languages.tex}
+\sectionspace
+
+\input{subsections/proficiencies/cloud.tex}
+\sectionspace
+
+\input{subsections/proficiencies/bin-analysis.tex}
+\sectionspace
+
+\input{subsections/proficiencies/pentesting.tex}
+\sectionspace
+
+%------------------------------------------------
+
+\section{Other Leadership} 
+
+\input{subsections/extra/other-leadership.tex}
+\sectionspace
+
+%------------------------------------------------
+
+\section{Academic Depth/Breadth}
+
+\input{subsections/education/breadth-depth.tex}
+
+%------------------------------------------------
+
+\begin{multicols}{2}
+
+\vspace*{3pt}
+\section{Links}
+\input{subsections/links/links.tex}
+
+\columnbreak
+
+\vspace*{0pt}
+\input{subsections/links/qrcode.tex}
+
+\end{multicols}
+
+\input{subsections/links/personalized-msg.tex}
+
+\end{minipage}
+
+%------------------------------------------------
+
+\section{Certifications/Courses/Competitions/Conferences}
+\input{subsections/training/table.tex}
+\end{document}
