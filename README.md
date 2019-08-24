@@ -31,7 +31,7 @@ How do you build
 
 Run the following command. This will generate a Resume per company in `companies.txt` and put the PDFs in `Final Resumes`
 
-`.\gen-resumes.bat .\Resume-Template-1.tex .\companies.txt`
+`.\gen-resumes.ps1 .\Resume-Template-1.tex .\companies.txt`
 
 
 What should be customized
