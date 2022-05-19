@@ -14,7 +14,7 @@ See some examples in the `Examples` folder.
 Prerequisites
 -------------
 
-- Windows (I will gladly accept a pull request that adds a build.sh, gen-resumes.sh, and nix-recompile.sh)
+- Wi̶n̶d̶o̶w̶s̶ Support for Mac and Linux added
 - Docker
 - A text editor
 
@@ -31,8 +31,10 @@ How do you build
 
 Run the following command. This will generate a Resume per company in `companies.txt` and put the PDFs in `Final Resumes`
 
+Windows:
 `.\gen-resumes.ps1 .\Resume-Template-1.tex .\companies.txt`
-
+Linux/MacOS
+`sudo ./gen-resumes.sh Resume-Template-1.tex companies.txt`
 
 What should be customized
 -------------------------
