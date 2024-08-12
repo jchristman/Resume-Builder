@@ -1,0 +1,31 @@
+name: Build and Release
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y dos2unix zip
+        
+    - name: Generate Resume
+      run: |
+        dos2unix ./Resume-Template-1.tex ./companies.txt
+        ./gen-resumes.sh ./Resume-Template-1.tex ./companies.txt
+        
+    - name: Upload Resume PDFs as Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: resume-pdf
+        path: ./Final\ Resumes/*.pdf

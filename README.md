@@ -22,7 +22,6 @@ Prerequisites
 What you need to change to build
 --------------------------------
 
-- The path in win-recompile.bat to your cloned directory. It's currently hardcoded because I'm bad at Windows and "." did not work
 - A Resume template (See examples in Resume-Template-1.tex and Resume-Template-2.tex)
 
 
@@ -31,7 +30,7 @@ How do you build
 
 Run the following command. This will generate a Resume per company in `companies.txt` and put the PDFs in `Final Resumes`
 
-`.\gen-resumes.ps1 .\Resume-Template-1.tex .\companies.txt`
+`.\gen-resumes.sh .\Resume-Template-1.tex .\companies.txt`
 
 
 What should be customized

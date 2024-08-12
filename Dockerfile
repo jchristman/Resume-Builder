@@ -1,4 +1,4 @@
-FROM jpbernius/xelatex
+FROM blang/latex:ubuntu
 
 RUN apt-get update; exit 0
 RUN apt-get install 

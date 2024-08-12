@@ -1,3 +1,3 @@
 Company\ A
 Company\ B
-CompanyC
+Company\ C

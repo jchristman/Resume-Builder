@@ -15,4 +15,3 @@ do
     mv Resume.pdf "Final Resumes/$line-Resume.pdf"
 done < "$companies_file"
 
-find Final\ Resumes -name "*.pdf" -print0 | xargs -0 -n 1 xdg-open
